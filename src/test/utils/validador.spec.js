@@ -29,4 +29,14 @@ describe("Validador", () => {
 
     expect(validarNumeroDocumento(cnpj)).toBeUndefined();
   });
+  it("Deveria retornar um tipo de conexão não suportado", () => {
+    const tipoDeConexao = "tetrafasico";
+    const razoesInelegibilidade = [];
+
+    validarTipoDeConexao(tipoDeConexao, razoesInelegibilidade);
+
+    expect(razoesInelegibilidade).toStrictEqual([
+      "Tipo de conexão não suportado"
+    ]);
+  });
 });
