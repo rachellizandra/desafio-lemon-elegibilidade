@@ -61,5 +61,35 @@ describe("Validador", () => {
     ]);
   });
 
-  
+  it("Deveria retornar um tipo de conexão não suportado", () => {
+    const historicoDeConsumo = 400;
+    const tipoDeConexao = "tetrafasico";
+    const razoesInelegibilidade = [];
+
+    validarHistoricoConsumo({
+      historicoDeConsumo,
+      razoesInelegibilidade,
+      tipoDeConexao,
+    });
+
+    expect(razoesInelegibilidade).toStrictEqual([
+      "Tipo de conexão não suportado",
+    ]);
+  });
+
+  it("Deveria retornar um histórico de consumo abaixo da média", () => {
+    const mediaDeConsumo = 350;
+    const tipoDeConexao = "monofasico";
+    const razoesInelegibilidade = [];
+
+    validarHistoricoConsumo({
+      mediaDeConsumo,
+      razoesInelegibilidade,
+      tipoDeConexao,
+    });
+
+    expect(razoesInelegibilidade).toStrictEqual([
+      "Consumo muito baixo para tipo de conexão",
+    ]);
+  });
 });
