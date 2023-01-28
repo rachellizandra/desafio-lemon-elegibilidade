@@ -90,16 +90,16 @@ Para checar a elegibilidade iremos aplicar os seguintes critérios:
 
 # Resumo do desafio 
 
-1-	Instalou-se as dependências: 
-  1.1- npm i –D @types/jest -> este pacote contém as definições dos tipos para o Jest
-  1.2- npm install --save-dev jest -> framework do Javascript para testes
-  1.3- npm install coverage -> pacote para cobertura de testes
-  2-	Os dados do tipo.js foram separados em pastas divididas em DTO e Enums;
-3-	Criou-se um arquivo para validação de critérios de elegibilidade -> validador.js;
-4-	Criou-se um arquivo com a função de avaliar o cliente, passando todas as funções do validador.js;
-5-	Criou-se uma pasta de testes divida em dois arquivos: um para avaliar o cliente de acordo com solicitado como desafio (avaliarCliente.spec.js) e outro para validação dos critérios de elegibilidade (validador.spec.js);
-6-	Foram 2 testes para avaliar cliente sendo elegível ou não, e 8 testes para verificar a validação das funções que indicam a inelegibilidade;
-7-	**Para rodar em sua máquina, execute o comando npm install e npm run test:coverage para verificar o funcionamento dos testes.**
+-	Instalou-se as dependências: 
+  - npm i –D @types/jest -> este pacote contém as definições dos tipos para o Jest
+  - npm install --save-dev jest -> framework do Javascript para testes
+  - npm install coverage -> pacote para cobertura de testes
+  -	Os dados do tipo.js foram separados em pastas divididas em DTO e Enums;
+-	Criou-se um arquivo para validação de critérios de elegibilidade -> validador.js;
+-	Criou-se um arquivo com a função de avaliar o cliente, passando todas as funções do validador.js;
+-	Criou-se uma pasta de testes divida em dois arquivos: um para avaliar o cliente de acordo com solicitado como desafio (avaliarCliente.spec.js) e outro para validação dos critérios de elegibilidade (validador.spec.js);
+-	Foram 2 testes para avaliar cliente sendo elegível ou não, e 8 testes para verificar a validação das funções que indicam a inelegibilidade;
+-	**Para rodar em sua máquina, execute o comando npm install e npm run test:coverage para verificar o funcionamento dos testes.**
 
 
 
