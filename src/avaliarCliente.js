@@ -20,13 +20,13 @@ exports.avaliarCliente = ({
   };
   const razoesInelegibilidade = [];
   validarNumeroDocumento(numeroDoDocumento);
-  validarTipoDeConexao(tipoDeConexao);
-  validarClasseConsumo(classeDeConsumo);
-  validarModalidadeTarifaria(modalidadeTarifaria);
+  validarTipoDeConexao(tipoDeConexao, razoesInelegibilidade);
+  validarClasseConsumo(classeDeConsumo, razoesInelegibilidade);
+  validarModalidadeTarifaria(modalidadeTarifaria, razoesInelegibilidade);
 
   const mediaDeConsumo = calcularMediaDeConsumo(historicoDeConsumo);
 
-  validarHistoricoConsumo(mediaDeConsumo);
+  validarHistoricoConsumo(mediaDeConsumo, razoesInelegibilidade);
 
   if (razoesInelegibilidade.length > 0) {
     output.razoesInelegibilidade = razoesInelegibilidade;
