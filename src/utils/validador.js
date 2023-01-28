@@ -15,7 +15,7 @@ exports.validarModalidadeTarifaria = (modalidadeTarifaria) => {
     return modalidadeTarifaria;
 }
 
-exports.validarHistoricoConsumo = (mediaDeconsumo, tipoDeConexao) => {
+exports.validarHistoricoConsumo = (mediaDeconsumo) => {
     return mediaDeconsumo;
 }
 
