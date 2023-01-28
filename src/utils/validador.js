@@ -54,10 +54,35 @@ exports.validarClasseConsumo = (classeDeConsumo, razoesInelegibilidade) => {
     return razoesInelegibilidade.push(CLASSE_DE_CONSUMO);
 };
 
-exports.validarModalidadeTarifaria = (modalidadeTarifaria) => {
-  return modalidadeTarifaria;
+exports.validarModalidadeTarifaria = (
+  modalidadeTarifaria,
+  razoesInelegibilidade
+) => {
+  const modalidadeValida = modalidadesTarifariasEnum.some(
+    (modalidade) => modalidade === modalidadeTarifaria
+  );
+  if (!modalidadeValida)
+    return razoesInelegibilidade.push(MODALIDADE_TARIFARIA);
+  const modalidadesDisponiveisAceitas = modalidadesTarifariasElegiveisEnum;
+  const modalidadeElegivel = modalidadesDisponiveisAceitas.some(
+    (modalidade) => modalidade === modalidadeTarifaria
+  );
+  if (!modalidadeElegivel)
+    return razoesInelegibilidade.push(MODALIDADE_TARIFARIA);
 };
 
-exports.validarHistoricoConsumo = (mediaDeconsumo) => {
-  return mediaDeconsumo;
+exports.validarHistoricoConsumo = ({
+  mediaDeConsumo,
+  razoesInelegibilidade,
+  tipoDeConexao,
+  // As chaves dentro dos parâmetros é uma boa prática de Javascript, pois garante a inclusão de todos os parâmetros para chamar a função não necessariamente na mesma ordem.
+}) => {
+  //O método hasOwnProperty() retorna um booleano indicando se o objeto tem a propriedade especificada como sua própria propriedade
+  if (!consumoMinimoParaConexao.hasOwnProperty(tipoDeConexao)) {
+    //Valida se existe a chave no objeto, e, caso não exista a chave no objeto, retorna tipo de conexão não suportada
+    return razoesInelegibilidade.push(CONEXAO_SUPORTADA);
+  }
+  //Validação do consumo
+  if (consumoMinimoParaConexao[tipoDeConexao] > mediaDeConsumo)
+    return razoesInelegibilidade.push(CONSUMO_BAIXO);
 };
