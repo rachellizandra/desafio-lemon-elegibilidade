@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1674921205548" clover="3.2.0">
-  <project timestamp="1674921205548" name="All files">
-    <metrics statements="79" coveredstatements="75" conditionals="20" coveredconditionals="16" methods="14" coveredmethods="14" elements="113" coveredelements="105" complexity="0" loc="79" ncloc="79" packages="3" files="11" classes="11"/>
+<coverage generated="1674923915661" clover="3.2.0">
+  <project timestamp="1674923915661" name="All files">
+    <metrics statements="79" coveredstatements="79" conditionals="20" coveredconditionals="20" methods="14" coveredmethods="14" elements="113" coveredelements="113" complexity="0" loc="79" ncloc="79" packages="3" files="11" classes="11"/>
     <package name="src">
       <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="avaliarCliente.js" path="C:\Users\rache\OneDrive\Documentos\Programação\desafios\desafio-lemonenergy\src\avaliarCliente.js">
@@ -44,7 +44,7 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="56" coveredstatements="52" conditionals="18" coveredconditionals="14" methods="13" coveredmethods="13"/>
+      <metrics statements="56" coveredstatements="56" conditionals="18" coveredconditionals="18" methods="13" coveredmethods="13"/>
       <file name="calcularEconomiaAnualDeCO2.js" path="C:\Users\rache\OneDrive\Documentos\Programação\desafios\desafio-lemonenergy\src\utils\calcularEconomiaAnualDeCO2.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
@@ -79,7 +79,7 @@
         <line num="9" count="2" type="stmt"/>
       </file>
       <file name="validador.js" path="C:\Users\rache\OneDrive\Documentos\Programação\desafios\desafio-lemonenergy\src\utils\validador.js">
-        <metrics statements="41" coveredstatements="37" conditionals="18" coveredconditionals="14" methods="10" coveredmethods="10"/>
+        <metrics statements="41" coveredstatements="41" conditionals="18" coveredconditionals="18" methods="10" coveredmethods="10"/>
         <line num="3" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
@@ -97,30 +97,30 @@
         <line num="39" count="3" type="cond" truecount="2" falsecount="0"/>
         <line num="40" count="1" type="stmt"/>
         <line num="43" count="2" type="stmt"/>
-        <line num="44" count="2" type="stmt"/>
-        <line num="45" count="7" type="stmt"/>
-        <line num="47" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="48" count="0" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="45" count="12" type="stmt"/>
+        <line num="47" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="1" type="stmt"/>
         <line num="49" count="2" type="stmt"/>
         <line num="50" count="2" type="stmt"/>
         <line num="51" count="6" type="stmt"/>
         <line num="53" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="54" count="1" type="stmt"/>
         <line num="57" count="2" type="stmt"/>
-        <line num="61" count="2" type="stmt"/>
-        <line num="62" count="7" type="stmt"/>
-        <line num="64" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="65" count="0" type="stmt"/>
+        <line num="61" count="3" type="stmt"/>
+        <line num="62" count="11" type="stmt"/>
+        <line num="64" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="65" count="1" type="stmt"/>
         <line num="66" count="2" type="stmt"/>
         <line num="67" count="2" type="stmt"/>
         <line num="68" count="4" type="stmt"/>
         <line num="70" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="71" count="1" type="stmt"/>
         <line num="74" count="2" type="stmt"/>
-        <line num="81" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="83" count="0" type="stmt"/>
-        <line num="86" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="87" count="0" type="stmt"/>
+        <line num="81" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="86" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="87" count="1" type="stmt"/>
       </file>
     </package>
   </project>
