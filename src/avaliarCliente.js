@@ -15,9 +15,25 @@ exports.avaliarCliente = ({
   modalidadeTarifaria,
   historicoDeConsumo,
 }) => {
+  const output = {
+    elegivel: false,
+  };
+  const razoesInelegibilidade = [];
   validarNumeroDocumento(numeroDoDocumento);
   validarTipoDeConexao(tipoDeConexao);
   validarClasseConsumo(classeDeConsumo);
   validarModalidadeTarifaria(modalidadeTarifaria);
-  validarHistoricoConsumo(historicoDeConsumo);
+
+  const mediaDeConsumo = calcularMediaDeConsumo(historicoDeConsumo);
+
+  validarHistoricoConsumo(mediaDeConsumo);
+
+  if (razoesInelegibilidade.length > 0) {
+    output.razoesInelegibilidade = razoesInelegibilidade;
+    return output;
+  }
+  output.economiaAnualDeCO2 = calcularEconomiaAnualDeCO2(mediaDeConsumo);
+  output.elegivel = true;
+
+  return output;
 };
