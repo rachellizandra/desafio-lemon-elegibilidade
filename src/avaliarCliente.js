@@ -1,5 +1,10 @@
 "use strict";
 
+const { calcularMediaDeConsumo } = require("./utils/calcularMediaDeConsumo");
+const {
+  calcularEconomiaAnualDeCO2,
+} = require("./utils/calcularEconomiaAnualDeCO2");
+
 const {
   validarNumeroDocumento,
   validarTipoDeConexao,
@@ -26,7 +31,7 @@ exports.avaliarCliente = ({
 
   const mediaDeConsumo = calcularMediaDeConsumo(historicoDeConsumo);
 
-  validarHistoricoConsumo(mediaDeConsumo, razoesInelegibilidade);
+  validarHistoricoConsumo({mediaDeConsumo, razoesInelegibilidade, tipoDeConexao});
 
   if (razoesInelegibilidade.length > 0) {
     output.razoesInelegibilidade = razoesInelegibilidade;
