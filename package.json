@@ -1,0 +1,27 @@
+{
+  "name": "desafio-lemonenergy",
+  "description": "Desafio técnico realizado como etapa classificatória no processo seletivo para Backend Engineer na Lemon Energy.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachellizandra/desafio-lemon-elegibilidade.git"
+  },
+  "author": "Rachel Lizandra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rachellizandra/desafio-lemon-elegibilidade/issues"
+  },
+  "homepage": "https://github.com/rachellizandra/desafio-lemon-elegibilidade#readme",
+  "dependencies": {
+    "coverage": "^0.4.1"
+  }
+}
