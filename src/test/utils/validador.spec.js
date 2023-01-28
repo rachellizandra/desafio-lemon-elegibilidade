@@ -36,7 +36,30 @@ describe("Validador", () => {
     validarTipoDeConexao(tipoDeConexao, razoesInelegibilidade);
 
     expect(razoesInelegibilidade).toStrictEqual([
-      "Tipo de conexão não suportado"
+      "Tipo de conexão não suportado",
     ]);
   });
+
+  it("Deveria retornar classe de consumo não aceita", () => {
+    const classeConsumo = "embaixada";
+    const razoesInelegibilidade = [];
+
+    validarClasseConsumo(classeConsumo, razoesInelegibilidade);
+
+    expect(razoesInelegibilidade).toStrictEqual([
+      "Classe de consumo não aceita",
+    ]);
+  });
+
+  it("Deveria retornar uma modalidade tarifária não aceita", () => {
+    const modalidadeTarifaria = "amarela";
+    const razoesInelegibilidade = [];
+
+    validarModalidadeTarifaria(modalidadeTarifaria, razoesInelegibilidade);
+    expect(razoesInelegibilidade).toStrictEqual([
+      "Modalidade tarifária não aceita",
+    ]);
+  });
+
+  
 });
