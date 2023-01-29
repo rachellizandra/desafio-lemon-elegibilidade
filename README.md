@@ -101,4 +101,4 @@ Para checar a elegibilidade iremos aplicar os seguintes critérios:
 - Criou-se um arquivo com a função de avaliar o cliente, passando todas as funções do validador.js;
 - Criou-se uma pasta de testes divida em dois arquivos: um para avaliar o cliente de acordo com solicitado como desafio (avaliarCliente.spec.js) e outro para validação dos critérios de elegibilidade (validador.spec.js);
 - Foram 2 testes para avaliar cliente sendo elegível ou não, e 8 testes para verificar a validação das funções que indicam a inelegibilidade;
-- **Para rodar em sua máquina, execute o comando npm install e npm run test:coverage para verificar o funcionamento dos testes.**
+- **Para rodar em sua máquina, dê um fork nesse repositório, execute os comandos npm install e npm run test:coverage para verificar o funcionamento dos testes.**
