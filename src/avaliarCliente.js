@@ -10,7 +10,8 @@ const {
   validarTipoDeConexao,
   validarClasseConsumo,
   validarModalidadeTarifaria,
-  validarHistoricoConsumo,
+  validarQuantidadeConsumo,
+  validarHistoricoConsumo
 } = require("./utils/validador");
 
 exports.avaliarCliente = ({
@@ -28,6 +29,7 @@ exports.avaliarCliente = ({
   validarTipoDeConexao(tipoDeConexao, razoesInelegibilidade);
   validarClasseConsumo(classeDeConsumo, razoesInelegibilidade);
   validarModalidadeTarifaria(modalidadeTarifaria, razoesInelegibilidade);
+  validarQuantidadeConsumo(historicoDeConsumo);
 
   const mediaDeConsumo = calcularMediaDeConsumo(historicoDeConsumo);
 
