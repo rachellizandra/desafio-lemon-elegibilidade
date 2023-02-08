@@ -25,11 +25,12 @@ exports.avaliarCliente = ({
     elegivel: false,
   };
   const razoesInelegibilidade = [];
+  
+  validarQuantidadeConsumo(historicoDeConsumo);
   validarNumeroDocumento(numeroDoDocumento);
   validarTipoDeConexao(tipoDeConexao, razoesInelegibilidade);
   validarClasseConsumo(classeDeConsumo, razoesInelegibilidade);
   validarModalidadeTarifaria(modalidadeTarifaria, razoesInelegibilidade);
-  validarQuantidadeConsumo(historicoDeConsumo);
 
   const mediaDeConsumo = calcularMediaDeConsumo(historicoDeConsumo);
 
