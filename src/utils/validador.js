@@ -74,7 +74,7 @@ exports.validarModalidadeTarifaria = (
 exports.validarQuantidadeConsumo = (historicosDeConsumo) => {
   if(historicosDeConsumo.length < 3 || historicosDeConsumo.length > 12) {
       throw new RangeError(`A quantidade mínima do histórico deve ser 3 meses e máxima de 12 meses.`)
-  } return historicosDeConsumo;
+  } return;
 };
 
 exports.validarHistoricoConsumo = ({
