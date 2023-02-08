@@ -2,8 +2,10 @@
 
 exports.calcularMediaDeConsumo = (historicosDeConsumo) => {
   const historicoInicial = 0;
-  return historicosDeConsumo.reduce(
+  let somaDoConsumo = historicosDeConsumo.reduce(
     (total, valor) => total + valor,
     historicoInicial
   );
+  let media = somaDoConsumo / historicosDeConsumo.length
+  return media;
 };
